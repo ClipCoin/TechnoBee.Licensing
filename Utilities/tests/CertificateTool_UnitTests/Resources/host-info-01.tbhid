@@ -1,0 +1,16 @@
+version: 1.0
+timestamp: 2017-09-26T16:46:56.3106205+03:00
+hostName: MALAKHOV-WS
+diskDrives:
+- deviceId: '\\.\PHYSICALDRIVE2'
+  serialNumber: 'WXG1A14J1646    '
+- deviceId: '\\.\PHYSICALDRIVE1'
+  serialNumber: 2012062914345300
+- deviceId: '\\.\PHYSICALDRIVE0'
+  serialNumber: ES74N02921060483I
+networkInterfaces:
+- macAddress: A0:8C:FD:D7:3E:D4
+- macAddress: C2:C5:20:52:41:53
+- macAddress: C2:69:20:52:41:53
+- macAddress: C4:0A:20:52:41:53
+- macAddress: A0:8C:FD:D7:3E:D4

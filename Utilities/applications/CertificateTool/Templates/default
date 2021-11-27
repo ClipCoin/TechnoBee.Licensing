@@ -1,0 +1,27 @@
+﻿guid: A5EEF30B-1F4B-4686-ABC1-5D7FC5F77F4C
+issueTime: 2018-01-10 00:00:00
+effectiveTime: 2019-01-10 00:00:00
+validityPeriod: 365
+authority:
+  guid: 1E30CDD2-F2A5-4B3F-ABA0-61190C535847
+  name: TechnoBee Ltd.
+  facilityGuid: 66D5254B-79BA-4248-8BC1-52371B790D10
+holder:
+  id: 4356332
+  identityProvider: "internal-cms"
+  name: "Henderson Russia"
+  contacts: "Jenn Smith <jenn.smith@hendersson.com>"
+coverage:
+  products:
+  - productGuid: 385D940F-A5E5-46E3-A479-317779D8482F
+    versions: ["1.0"]
+    editions: []
+    applications:
+      NetApplication01:
+        licenseState: enabled
+	components:
+	  - name: "server"
+	    restrictions:
+		  maxNumberOfConnections: 10
+prerequisites: {}
+scripts: []

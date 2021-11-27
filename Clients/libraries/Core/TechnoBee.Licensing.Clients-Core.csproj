@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <RootNamespace>TechnoBee.Licensing.Clients</RootNamespace>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
+    <PackageReference Include="YamlDotNet.Signed" Version="4.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\libraries\Framework-Abstractions\TechnoBee.Licensing.Framework-Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Storage\libraries\Abstractions\Technobee.Counters.Licensing.DataModels-Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Utilities\libraries\Deployment-Abstractions\TechnoBee.Licensing.Utilities.Deployment-Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Utilities\libraries\Fingerprints\TechnoBee.Licensing.Utilities.Fingerprints.csproj" />
+    <ProjectReference Include="..\Abstractions\TechnoBee.Licensing.Clients-Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

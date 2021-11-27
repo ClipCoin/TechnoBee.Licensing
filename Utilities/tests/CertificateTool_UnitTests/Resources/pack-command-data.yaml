@@ -1,0 +1,4 @@
+﻿#   Single license, single fingerprint
+- licenseResources: ["license-01.tblic"]
+  hostInformationDigestResource: "host-info-01.tbhid"
+  fingerprints: ["Ddsn1:Sha256"]

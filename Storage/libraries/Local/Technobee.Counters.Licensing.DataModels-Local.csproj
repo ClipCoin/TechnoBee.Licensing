@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <RootNamespace>TechnoBee.Licensing.Storage</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>$(SolutionDir).snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Glob" Version="0.3.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
+    <PackageReference Include="YamlDotNet.Signed" Version="4.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\libraries\Framework-Abstractions\TechnoBee.Licensing.Framework-Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Framework\libraries\Framework-Core\TechnoBee.Licensing.Framework-Core.csproj" />
+    <ProjectReference Include="..\..\..\Helpers\libraries\DocumentStorage\TechnoBee.Licensing.Helpers-DocumentStorage.csproj" />
+    <ProjectReference Include="..\Abstractions\Technobee.Counters.Licensing.DataModels-Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

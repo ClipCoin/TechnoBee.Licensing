@@ -1,0 +1,42 @@
+# TechnoBee License Certificate
+issuedOn: "2001-12-14T21:59:43.10-05:00"
+licenses:
+  - id: "27151C77-8088-4685-AFF3-F761A6FF6709"
+    issueDate: "2001-12-14T21:59:43.10-05:00"
+    affectiveDate: "2001-12-14T21:59:43.10-05:00"
+    duration: "365 days"
+    authority:
+      id: 54646464
+      name: TechnoBee Ltd.
+      facilityId: "A12E79ED-6071-48EB-B562-69AD9F8FDBD9"
+    holder:
+      id: 3226324343
+      identityProvider: "TechnoBeeBusinessInsightsDb"
+      legalName: "Aftertime Ventures Inc."
+      contact: "Eduard Malakhov <eduard.malakhov@aftertimeventures.com>"
+    coverage:
+        products: 
+          - id: "8E0803A6-7694-4D7C-80ED-D0A285EC5465"
+            versions: ["1.*", "2.1.*"]
+            editions: ["ultimate"]
+            components:
+              - name: "server"
+                features: [""]
+                restrictions:
+                  maxNumberOfConnections: 10
+			      feature1:
+			        numTests: 23
+				    tags: ["relative", "poor"]
+          - id: "D90CB115-07F6-4BBE-95AA-F8914306F285"
+            versions: ["1.*"]
+		    applications:
+		      - name: "verifier"
+		        restrictions:
+		          state: disabled
+    requirements:
+      host:
+        fingerprint: "QmFzZTY0IGlzIGEgZ2VuZhIG51bWJlciBvZiBzaW1pbGFyIGVuY29kaW5nIA=="
+    hooks:
+      - event: "onload"
+        lang: "js"
+        code: "function () {}"

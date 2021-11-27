@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <RootNamespace>TechnoBee.Licensing.Clients</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Glob" Version="0.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\libraries\Framework-Abstractions\TechnoBee.Licensing.Framework-Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Utilities\libraries\Deployment-Core\TechnoBee.Licensing.Utilities.Deployment-Core.csproj" />
+    <ProjectReference Include="..\Abstractions\TechnoBee.Licensing.Clients-Abstractions.csproj" />
+    <ProjectReference Include="..\Annotations\TechnoBee.Licensing.Clients-Annotations.csproj" />
+    <ProjectReference Include="..\Core\TechnoBee.Licensing.Clients-Core.csproj" />
+  </ItemGroup>
+
+</Project>

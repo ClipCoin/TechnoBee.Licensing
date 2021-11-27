@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <RootNamespace>TechnoBee.Licensing.Client</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\libraries\Framework-Abstractions\TechnoBee.Licensing.Framework-Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Storage\libraries\Abstractions\Technobee.Counters.Licensing.DataModels-Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <RootNamespace>TechnoBee.Licensing.Storage</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>$(SolutionDir).snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Technobee.Licensing.Storage.DataModels\**" />
+    <EmbeddedResource Remove="Technobee.Licensing.Storage.DataModels\**" />
+    <None Remove="Technobee.Licensing.Storage.DataModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\libraries\Framework-Abstractions\TechnoBee.Licensing.Framework-Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

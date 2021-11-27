@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="LicensingManager.Pages.Tools"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LicensingManager.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#586e75">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="StateGroup">
+                <VisualState x:Name="Desktop">
+                    <!--Desktop version-->
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="1000"/>
+                    </VisualState.StateTriggers>
+                    <!--Расстановка по ячейкам-->
+                    <VisualState.Setters>
+                        <Setter Target="CreateFingerprint.(Grid.Row)" Value="0" />
+                        <Setter Target="CreateFingerprint.(Grid.Column)" Value="0" />
+                        <!--Column union-->
+                        <Setter Target="CreateFingerprint.(Grid.RowSpan)" Value="3" />
+                        <Setter Target="CreateFingerprint.(Grid.ColumnSpan)" Value="4"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Background="#073642">
+            <HyperlinkButton Margin="10" Content="Fingerprints" Click="fingerprintButton_Click" Style="{StaticResource HyperMenu}">
+                <HyperlinkButton.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" />
+                    </DataTemplate>
+                </HyperlinkButton.ContentTemplate>
+            </HyperlinkButton>
+            <HyperlinkButton Content="Products" Click="productButton_Click" Style="{StaticResource HyperMenu}">
+                <HyperlinkButton.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" />
+                    </DataTemplate>
+                </HyperlinkButton.ContentTemplate>
+            </HyperlinkButton>
+            <HyperlinkButton  Content="Licensing" Click="licenseButton_Click" Style="{StaticResource HyperMenu}">
+                <HyperlinkButton.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" />
+                    </DataTemplate>
+                </HyperlinkButton.ContentTemplate>
+            </HyperlinkButton>
+        </StackPanel>
+        <Frame Name="MyFrame" Margin="0 60 0 0" Grid.RowSpan="2" />
+    </Grid>
+</Page>

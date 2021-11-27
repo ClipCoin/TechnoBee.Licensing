@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TechnoBee.Licensing.Utilities.CertificateTool": {
+      "commandName": "Project",
+      "commandLineArgs": "pack C:\\temp\\sample01.tblic --host \"C:\\Temp\\hostinfo.tbhid\" --output C:\\temp\\sample01.tblcd --fingerprint Ddsn1:Sha256"
+    }
+  }
+}

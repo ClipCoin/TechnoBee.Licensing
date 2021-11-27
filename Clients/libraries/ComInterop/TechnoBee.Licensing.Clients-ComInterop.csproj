@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF3396E4-D29F-4EF0-9641-CB119044D7F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoBee.Licensing.Clients</RootNamespace>
+    <AssemblyName>LicensingComInterop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>LicensingComInterop.sxs.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.DependencyInjection.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="RGiesecke.DllExport.Metadata, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8f52d83c1a22df51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UnmanagedExports.1.2.7\lib\net\RGiesecke.DllExport.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientServicesResolver.cs" />
+    <Compile Include="ILicenseFacade.cs" />
+    <Compile Include="LicenseFacade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\libraries\Framework-Abstractions\TechnoBee.Licensing.Framework-Abstractions.csproj">
+      <Project>{e2c97d92-5a26-44ed-b4cf-3fb4e4c11670}</Project>
+      <Name>TechnoBee.Licensing.Framework-Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Storage\libraries\Local\Technobee.Counters.Licensing.DataModels-Local.csproj">
+      <Project>{C6DF15F5-E263-41E0-8404-D00ACED88D8F}</Project>
+      <Name>Technobee.Counters.Licensing.DataModels-Local</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utilities\libraries\Common-Abstractions\TechnoBee.Licensing.Utilities.Common-Abstractions.csproj">
+      <Project>{32789A82-8818-46AD-A082-81922F65F3F5}</Project>
+      <Name>TechnoBee.Licensing.Utilities.Common-Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utilities\libraries\Deployment-Abstractions\TechnoBee.Licensing.Utilities.Deployment-Abstractions.csproj">
+      <Project>{909DE05A-96B1-4580-B85C-3599D1BF9EC0}</Project>
+      <Name>TechnoBee.Licensing.Utilities.Deployment-Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utilities\libraries\Deployment-Core\TechnoBee.Licensing.Utilities.Deployment-Core.csproj">
+      <Project>{facf5bb2-f2c2-449d-b185-7a602f6fa44d}</Project>
+      <Name>TechnoBee.Licensing.Utilities.Deployment-Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utilities\libraries\Fingerprints\TechnoBee.Licensing.Utilities.Fingerprints.csproj">
+      <Project>{c01c4911-58d4-4f6c-b484-fe0ff5d17453}</Project>
+      <Name>TechnoBee.Licensing.Utilities.Fingerprints</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Utilities\libraries\LicensingHelper\TechnoBee.Licensing.Utilities.LicensingHelper.csproj">
+      <Project>{d32081a7-f10e-4a2e-aa7b-5b893f877fd0}</Project>
+      <Name>TechnoBee.Licensing.Utilities.LicensingHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abstractions\TechnoBee.Licensing.Clients-Abstractions.csproj">
+      <Project>{a80780c7-4929-4acb-85d2-8a2ecd9a73c4}</Project>
+      <Name>TechnoBee.Licensing.Clients-Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Annotations\TechnoBee.Licensing.Clients-Annotations.csproj">
+      <Project>{952c91f6-abdb-4c6c-b4e8-9036fd5563b4}</Project>
+      <Name>TechnoBee.Licensing.Clients-Annotations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\TechnoBee.Licensing.Clients-Core.csproj">
+      <Project>{6f3afe49-ab58-464d-b252-f7ef803bae7c}</Project>
+      <Name>TechnoBee.Licensing.Clients-Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocalStorage\TechnoBee.Licensing.Clients-LocalStorage.csproj">
+      <Project>{ac163228-be3e-48a1-a6ba-d41a8e05c32c}</Project>
+      <Name>TechnoBee.Licensing.Clients-LocalStorage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sdk\TechnoBee.Licensing.Clients-Sdk.csproj">
+      <Project>{35230bfe-018b-492b-accf-714462701079}</Project>
+      <Name>TechnoBee.Licensing.Clients-Sdk</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LicensingComInterop.sxs.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="../../../packages/UnmanagedExports.1.2.7/tools/RGiesecke.DllExport.targets" Condition="Exists('../../../packages/UnmanagedExports.1.2.7/tools/RGiesecke.DllExport.targets')" />
+</Project>

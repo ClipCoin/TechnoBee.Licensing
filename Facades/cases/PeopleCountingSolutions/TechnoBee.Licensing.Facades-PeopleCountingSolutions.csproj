@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <RootNamespace>TechnoBee.Licensing.Facades</RootNamespace>
+    <AssemblyName>TechnoBee.Licensing.Facades-PeopleCountingSolutions</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\libraries\Common\TechnoBee.Licensing.Facades-Common.csproj" />
+  </ItemGroup>
+
+</Project>

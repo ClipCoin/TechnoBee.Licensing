@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net47</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(SolutionDir).snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <AssemblyName>tblcert</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Templates\default" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\default" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\libraries\Framework-Abstractions\TechnoBee.Licensing.Framework-Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Framework\libraries\Framework-Core\TechnoBee.Licensing.Framework-Core.csproj" />
+    <ProjectReference Include="..\..\..\Helpers\libraries\IO\TechnoBee.Licensing.Helpers-IO.csproj" />
+    <ProjectReference Include="..\..\..\Storage\libraries\Local\Technobee.Counters.Licensing.DataModels-Local.csproj" />
+    <ProjectReference Include="..\..\libraries\Common-Abstractions\TechnoBee.Licensing.Utilities.Common-Abstractions.csproj" />
+    <ProjectReference Include="..\..\libraries\Common-Core\TechnoBee.Licensing.Utilities.Common-Core.csproj" />
+    <ProjectReference Include="..\..\libraries\Fingerprints\TechnoBee.Licensing.Utilities.Fingerprints.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

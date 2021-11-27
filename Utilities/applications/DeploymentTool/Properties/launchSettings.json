@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TechnoBee.Licensing.Utilities.DeploymentTool": {
+      "commandName": "Project",
+      "commandLineArgs": "-o C:\\temp\\hostinfo.tbhid -f" // "-i C:\\temp\\sample01.tblcd -f" //
+    }
+  }
+}

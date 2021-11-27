@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <SignAssembly>true</SignAssembly>
+
+    <DelaySign>false</DelaySign>
+
+    <AssemblyOriginatorKeyFile>$(SolutionDir).snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\host-info-01.tbhid" />
+    <None Remove="Resources\pack-command-data.yaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\host-info-01.tbhid" />
+    <EmbeddedResource Include="Resources\license-01.tblic" />
+    <EmbeddedResource Include="Resources\pack-command-data.yaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
+    <PackageReference Include="Moq" Version="4.7.99" />
+    <PackageReference Include="xunit" Version="2.2.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Helpers\libraries\IO\TechnoBee.Licensing.Helpers-IO.csproj" />
+    <ProjectReference Include="..\..\applications\CertificateTool\TechnoBee.Licensing.Utilities.CertificateTool.csproj" />
+    <ProjectReference Include="..\..\libraries\Fingerprints\TechnoBee.Licensing.Utilities.Fingerprints.csproj" />
+  </ItemGroup>
+
+</Project>

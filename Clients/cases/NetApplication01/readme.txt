@@ -1,0 +1,1 @@
+﻿This application demonstrates how one can load license certificate from a specific file and extract a license by specifying 
